@@ -16,7 +16,7 @@ Realitza totes les captures necessàries per a indicar que has realitzat la tasc
 
 ## 1. Modifica la classe `Calculadora.java`
 
-* Reanomena el paquet `ed.arturo` a `ed.<elteunom>`
+* Reanomena el paquet `ed.ismael` a `ed.<elteunom>`
 
 ## 2. **Documenta** el codi de la classe `Calculadora` usant comentaris `JavaDoc`:
 
