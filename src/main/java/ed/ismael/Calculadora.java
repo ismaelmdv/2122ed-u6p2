@@ -71,5 +71,51 @@ public class Calculadora {
 	public int diveix(int a, int b) {
 		return a/b;
 	}
-	
+
+	public int multiplicarNumeroNVeces(int numMultiplicador , int numeroVeces ){
+
+		int numeroUno = 1;
+
+		for ( int i = 0; i < numeroVeces ; i++ ){
+			numeroUno = numeroUno * numMultiplicador;
+		}
+
+		return numeroUno;
+
+	}
+
+	public boolean comprobarNumeroPar(int numeroComprobar ){
+
+		boolean resultadoComprobacion;
+
+		if ( numeroComprobar % 2 == 0) {
+			resultadoComprobacion = true;
+		} else {
+			resultadoComprobacion = false;
+		}
+
+		return resultadoComprobacion;
+
+	}
+
+	public String mostrarRestosNumero(int numeroDividendo) {
+
+		String mensaje = "";
+		int aux = numeroDividendo;
+		int resto;
+
+		while (aux > 0) {
+
+			resto = aux % 2;
+
+			mensaje = resto + mensaje;
+
+			aux = aux / 2;
+
+
+		}
+		return mensaje;
+	}
+
+
 }
