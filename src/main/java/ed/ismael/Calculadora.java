@@ -8,12 +8,13 @@ import java.util.InputMismatchException;
  * En esta clase hay cuatro metodos donde reciben dos parametros de tipo int y realizan unas operaciones, estan los metodos
  *  que suman, restan, multiplican y dividen dichos parametros y devuelven sus resultados.
  *
- * @author Ismael Marcos Díaz
- * @version 2.5
- * @since Disponible desde la version 1.9 Juny de 2019
+ * @Author Ismael Marcos Díaz
+ * @Version 2.5
+ * @Since Disponible desde la version 1.9 Juny de 2019
  *
  **/
 public class Calculadora {
+
 	/**
 	 * Devuelve un numero entero resultado de la suma entre dos enteros recibidos por el metodo.
 	 *
