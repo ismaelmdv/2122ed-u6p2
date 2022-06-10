@@ -72,18 +72,37 @@ public class Calculadora {
 		return a/b;
 	}
 
-	public int multiplicarNumeroNVeces(int numMultiplicador , int numeroVeces ){
+	/**
+	 * Este metodo recibe dos numeros uno lo multiplica con el valor de una variable n veces, por si mismo,
+	 * que son las veces del valor del segundo parametro, es decir calcula un exponente.
+	 *
+	 * @param base se multiplica con una variable que es 1 para que a partir de la primera vuelta del for se multiplique el resultado por el valor de esta variable
+	 * @param exponente es el valor que el for va a realizar antes de salirse
+	 * @return el resultado de multiplicar exponencialmente un numero
+	 *
+	 * @throws InputMismatchException cuando reciba un parametro que no corresponga con el tipo de variable que recibe
+	 * @throws NullPointerException cuando reciba un parametro que sea nulo  (Cannot load from int array because "a" is null)
+	 */
+	public int calculoExponente(int base , int exponente ){
 
-		int numeroUno = 1;
+		int resultado = 1;
 
-		for ( int i = 0; i < numeroVeces ; i++ ){
-			numeroUno = numeroUno * numMultiplicador;
+		for ( int i = 0; i < exponente ; i++ ){
+			resultado = resultado * base;
 		}
 
-		return numeroUno;
+		return resultado;
 
 	}
 
+	/**
+	 * Comprueba si el numero introducido como parametro es par dividiendo el numero entre dos y si es el resto es 0 es par.
+	 *
+	 * @param numeroComprobar el numero que es comprobado si es par o impar
+	 * @return devuelve true si es par y false si bo es par
+	 * @throws InputMismatchException cuando reciba un parametro que no corresponga con el tipo de variable que recibe
+	 * @throws NullPointerException cuando reciba un parametro que sea nulo  (Cannot load from int array because "a" is null)
+	 */
 	public boolean comprobarNumeroPar(int numeroComprobar ){
 
 		boolean resultadoComprobacion;
@@ -98,23 +117,31 @@ public class Calculadora {
 
 	}
 
-	public String mostrarRestosNumero(int numeroDividendo) {
+	/**
+	 * Convierte el numero introduci como parametro en binario en formato texto
+	 *
+	 * @param numero el numero ha convertir en en binario
+	 * @return el numero en binario en formato String
+	 * @throws InputMismatchException cuando reciba un parametro que no corresponga con el tipo de variable que recibe
+	 *  @throws NullPointerException cuando reciba un parametro que sea nulo  (Cannot load from int array because "a" is null)
+	 */
+	public String convertirNumeroABinario(int numero) {
 
-		String mensaje = "";
-		int aux = numeroDividendo;
+		String numeroBinario = "";
+		int aux = numero;
 		int resto;
 
 		while (aux > 0) {
 
 			resto = aux % 2;
 
-			mensaje = resto + mensaje;
+			numeroBinario = resto + numeroBinario;
 
 			aux = aux / 2;
 
 
 		}
-		return mensaje;
+		return numeroBinario;
 	}
 
 
